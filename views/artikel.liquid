@@ -1,0 +1,24 @@
+{% render 'partials/head.liquid' %}
+
+ <main class="artikel">
+
+    <div class="terug-knop">
+        <a href="/nieuws"><img src="/assets/pijltje-terug.svg" width="20" alt="pijltje terug">Terug</a>
+    </div>
+
+    <h1>Veld nieuws</h1>
+
+    <article>
+         {% for news in news %}
+        <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" alt="{{ news.title }}" width="342" height="300"> 
+        <p>Geplaatst op: {{ news.date }}</p> 
+        <h1>{{ news.title }}</h1>
+        <p>{{ news.body }}</p>  
+        {% endfor %} 
+    </article>
+
+ </main>
+
+{% render 'partials/navbar.liquid' %}
+
+{% render 'partials/foot.liquid' %}
