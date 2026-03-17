@@ -79,3 +79,8 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console
   console.log(`Daarna kun je via http://localhost:${app.get('port')}/ jouw interactieve website bekijken.\n\nThe Web is for Everyone. Maak mooie dingen 🙂`)
 })
+
+// !!!  404 error pagina !!! 
+app.use((req, res, next) => {
+  res.status(404).render("error.liquid")
+})
