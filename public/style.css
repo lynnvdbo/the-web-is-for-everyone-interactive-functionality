@@ -253,7 +253,7 @@ main.home {
 
 /* MARK: ARTIKEL PAGINA ----- */
 main.artikel {
-    article {
+    article:nth-of-type(1) {
         margin-left: 1em;
         margin-right: 1em;
 
@@ -268,6 +268,50 @@ main.artikel {
         aspect-ratio: 1/1;
         width: 100%;
     }
+    }
+
+    article:nth-of-type(2) {
+        background-color: var(--sierlint);
+        padding: 1em;
+        margin: 2em;
+        border-radius: var(--border-radius);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+
+        .name {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.2em;
+            gap: 0.5em;
+        }
+
+        .bericht {
+            display: flex;
+            flex-direction: column;
+            margin-block: 1.3em;
+            gap: 0.5em;
+        }
+    }
+
+    h2 {
+        margin-left: 0em;
+        font-size: 1.2em;
+    }
+
+    .verstuur-knop {
+        background-color: #555555;
+        color: var(--wit);
+        padding: 0.5em 1.1em 0.5em 1.1em;
+
+        &:hover {
+            background-color: transparent;
+            color: #555555;
+        }
     }
 }
 
