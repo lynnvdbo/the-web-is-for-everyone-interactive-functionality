@@ -96,6 +96,32 @@ app.get('/nieuws/:slug', async function (request, response) {
     });
   })
 
+// <form action="/nieuws/{{ news.id }}/{{ news.slug }}" method="POST"> vanuit formulier op de nieuwspagina wordt deze post route aangestuurd
+app.post('/nieuws/:id/:slug', async (request, response) => { 
+  
+    console.log(request.params.slug)
+    const postResponse = await fetch(
+      'https://fdnd-agency.directus.app/items/frankendael_news_comments', // API n point van de nieuws comments (hier kan je een GET en POST doen)
+      {
+        // dit is JSON object met de benodigde data om wat op te slaan
+        method: 'POST', // methode post meegeven zodat de server weet dat er data opgeslagen moet worden
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          news: request.params.id,     
+          comment: request.body.comment,  // dit is wat er in het formulierelement staat <textarea name="comment" required maxlength="100" style="height: 30px;"></textarea>
+          name: request.body.name
+        })
+      }
+    )
+
+    // const data = await postResponse.json()
+
+    console.log('het gaat goed vgm')
+    response.redirect(`/nieuws/${request.params.slug}`) // als de post gelukt is eeen redirect naar de get route VAN HET NIEUWA ARTIKEL
+})
+
 // !!! route naar COLLECTIE PAGINA !!!  
 app.get('/collectie', async function (request, response) {
   console.log(tempDummyNews)
@@ -160,13 +186,6 @@ app.post(…, async function (request, response) {
 */
 
 
-// Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
-// Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
-app.post('/', async function (request, response) {
-  // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
-  // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
-  response.redirect(303, '/')
-})
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
