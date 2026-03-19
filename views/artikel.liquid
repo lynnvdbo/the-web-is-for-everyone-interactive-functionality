@@ -2,6 +2,7 @@
 
  <main class="artikel">
 
+  {% for news in news %}
     <div class="terug-knop">
         <a href="/nieuws"><img src="/assets/pijltje-terug.svg" width="20" alt="pijltje terug">Terug</a>
     </div>
@@ -9,14 +10,30 @@
     <h1>Veld nieuws</h1>
 
     <article>
-         {% for news in news %}
         <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" alt="{{ news.title }}" width="342" height="300"> 
         <p>Geplaatst op: {{ news.date }}</p> 
         <h1>{{ news.title }}</h1>
         <p>{{ news.body }}</p>  
-        {% endfor %} 
     </article>
 
+{% comment %} laat een berichtje achter {% endcomment %}
+    <article>
+      <h2>Laat hier een leuk bericht achter!</h2>
+        <form action="/nieuws/{{ news.id }}/{{ news.slug }}" method="POST">
+          <label class="name">
+          Naam:
+          <input type="text" name="name" required>
+        </label>
+          <label class="bericht">
+            Bericht:
+            <textarea name="comment" required maxlength="100" style="height: 30px;"></textarea>
+          </label>
+
+          <label>
+            <input type="submit" value="Verstuur" class="verstuur-knop">
+          </label>
+        </form>
+    </article>
  </main>
 
 {% render 'partials/navbar.liquid' %}
