@@ -313,6 +313,19 @@ main.artikel {
             color: #555555;
         }
     }
+
+    .ontvangen-berichten {
+        max-width: 600px;
+        margin: 2em 2em 7em 2em;
+        padding: 2em;
+        background: var(--sierlint);
+        border-radius: var(--border-radius);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+        p {
+            margin-block: 1em;
+        }
+    }
 }
 
 
