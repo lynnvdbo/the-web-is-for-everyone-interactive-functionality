@@ -90,9 +90,20 @@ app.get('/nieuws/:slug', async function (request, response) {
     // deze code hieronder haalt data uit database op
     const res = await fetch('https://fdnd-agency.directus.app/items/frankendael_news/?filter[slug]=' + request.params.slug);
     const result = await res.json();
+// console.log(result.data[0].id)
+    const commentParams = new URLSearchParams({
+      'filter[news]': result.data[0].id,
+      'sort' : '-date_created'  
+    })
 
+   const commentResponse = await fetch('https://fdnd-agency.directus.app/items/frankendael_news_comments?' + commentParams)
+   const commentResponseJSON = await commentResponse.json()
+    console.log(commentResponseJSON)
     response.render('artikel.liquid', {
-      news: result.data
+      news: result.data,
+      newsId: result.data.id,
+      comments: commentResponseJSON.data
+
     });
   })
 
