@@ -42,7 +42,7 @@ main {
 }
 
 
-/* --------- HOME PAGINA */
+/* MARK: HOME PAGINA ----- */
 main.home {
 
     /* Section met collectie */
@@ -121,7 +121,7 @@ main.home {
 }
 
 
-/* !!!! NIEUWS PAGINA !!!! */
+/* MARK: NIEUWS PAGINA ----- */
 .terug-knop {
     margin: 1.5em;
     
@@ -140,7 +140,7 @@ main.home {
 }
 
 
-/* 3 filter buttons  */
+/* MARK: 3 FILTER BUTTONS   ----- */
 .navigatie-buttons {  
     text-align: center;
     display: flex;
@@ -164,7 +164,7 @@ main.home {
 
 
 /* https://codepen.io/kmuenster/pen/XWWeQGw */
-/* zoekbalk */
+/* MARK: ZOEKBALK ----- */
 .wrapper {
     margin: 2em 0em 2em 1em;
 
@@ -201,7 +201,7 @@ main.home {
 }
 
 
-/* alle nieuwsberichten */
+/* MARK: ALLE NIEUWSARTIKELEN ----- */
 .alle-nieuws {
     margin-left: 1em;
     margin-right: 1em;
@@ -251,7 +251,7 @@ main.home {
 }
 
 
-/* --------- ARTIKEL PAGINA */
+/* MARK: ARTIKEL PAGINA ----- */
 main.artikel {
     article {
         margin-left: 1em;
@@ -272,7 +272,7 @@ main.artikel {
 }
 
 
-/* --------- COLLECTIE PAGINA */
+/* MARK: COLLECTIE PAGINA ----- */
 main.collectie {
     article {
         margin-left: 1em;
@@ -330,7 +330,7 @@ main.collectie {
     }
 
 
-    /* --------- COLLECTIE PAGINA IN DE BLOEI */
+/* MARK: IN DE BLOEI PAGINA COLLECTIE----- */
     main.collectie-indebloei {
         article {
             display: flex;
@@ -399,7 +399,7 @@ main.collectie {
     }
 
 
-/* --------- COLLECTIE PAGINA NA DE BLOEI */
+/* MARK: NA DE BLOEI PAGINA COLLECTIE----- */
 main.collectie-nadebloei {
         article {
             display: flex;
@@ -468,7 +468,7 @@ main.collectie-nadebloei {
     }
 
 
-/* --------- NAVBAR */
+/* MARK: NAVBAR----- */
 footer {
     display: flex;
     align-items: center;
