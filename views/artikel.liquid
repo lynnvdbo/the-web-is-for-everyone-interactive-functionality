@@ -34,6 +34,18 @@
           </label>
         </form>
     </article>
+
+  {% comment %} alle ontvangen berichtjes {% endcomment %}
+  <div class="ontvangen-berichten">
+    {{ comments.size }} berichten  {% comment %} dit laat zien hoeveel comments er zijn {% endcomment %}
+    {% for comment in comments %}
+      <p>{{comment.name | default: 'onbekend'}}: {{comment.comment}} {{ comment.date_created | date: '%d-%m-%Y %H:%M' }}</p>
+    {% else %}
+      <p>Er zijn nog geen berichten voor dit artikel.</p>
+    {% endfor %}
+  </div>
+  {% endfor %}
+
  </main>
 
 {% render 'partials/navbar.liquid' %}
