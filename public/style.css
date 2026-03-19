@@ -281,6 +281,7 @@ main.artikel {
     form {
         display: flex;
         flex-direction: column;
+        accent-color: var(--donker-accent);
 
 
         .name {
@@ -324,6 +325,7 @@ main.artikel {
 
         p {
             margin-block: 1em;
+            font-weight: 700;
         }
     }
 }
@@ -571,3 +573,25 @@ footer {
     }
 }
 
+
+.ontvangen-berichten {
+    p { 
+        margin-block: 1em;
+    }
+
+    .comment-name {
+        font-weight: 600;
+        font-size: 1.1em;
+    }
+
+    .comment-text {
+        font-weight: 400;
+        font-size: 1.1em 
+    }
+
+    .comment-date {
+        font-weight: 200; 
+        font-size: 0.9em;
+        font-style:italic;
+    }
+}
