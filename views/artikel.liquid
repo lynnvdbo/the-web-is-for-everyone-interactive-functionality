@@ -32,14 +32,25 @@
           <label>
             <input type="submit" value="Verstuur" class="verstuur-knop">
           </label>
-        </form>
+        </form> 
     </article>
 
   {% comment %} alle ontvangen berichtjes {% endcomment %}
   <div class="ontvangen-berichten">
     {{ comments.size }} berichten  {% comment %} dit laat zien hoeveel comments er zijn {% endcomment %}
     {% for comment in comments %}
-      <p>{{comment.name | default: 'onbekend'}}: {{comment.comment}} {{ comment.date_created | date: '%d-%m-%Y %H:%M' }}</p>
+      <p>
+          <span class="comment-name">
+            {{ comment.name | default: 'onbekend' }}
+          </span>: 
+          <span class="comment-text">
+            {{ comment.comment }}
+          </span>
+          <br>
+          <span class="comment-date">
+            {{ comment.date_created | date: '%d-%m-%Y %H:%M' }}
+          </span>
+      </p>
     {% else %}
       <p>Er zijn nog geen berichten voor dit artikel.</p>
     {% endfor %}
