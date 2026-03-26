@@ -184,6 +184,8 @@ main.home {
 .alle-nieuws {
     margin-left: 1em;
     margin-right: 1em;
+    font-family: open sans;
+    font-weight: 700;
 
     a {
         color: var(--zwart);
@@ -217,7 +219,7 @@ main.home {
     }
 
     .label {
-        font-size: 0.8em;
+        font-size: 0.6em;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -226,16 +228,25 @@ main.home {
         justify-self: start; /* zorgt ervoor dat de border om de tekst dezelfde lengte krijgt als de tekst */
         padding: .5em;
         height: fit-content;
+        font-family: open sans;
+        font-weight: 400;
     }
 }
 
 
 /* MARK: ARTIKEL PAGINA ----- */
 main.artikel {
+
+    p {
+        /* font-family: inter; */
+        font-family: open sans;
+        font-weight: 400;
+    }
+
     article:nth-of-type(1) {
         margin-left: 1em;
         margin-right: 1em;
-
+        
     h1 {
         font-size: 1.5em;
         text-align: left;
@@ -316,6 +327,8 @@ main.collectie {
         margin-left: 1em;
         margin-right: 1em;
         border-radius: var(--border-radius);
+        font-family: open sans;
+        font-weight: 400;
 
         p {
             margin: 1em;
@@ -328,7 +341,7 @@ main.collectie {
             color: var(--wit);
             text-decoration: none;
             background-color: var(--donker-accent);
-            padding: 1em 6em 1em 6em;
+            padding: 1em 5.2em 1em 5.2em;
             border-radius: var(--border-radius);
             border: 1.5px solid var(--donker-accent);
             width: max-content; /* dit zorgt dat de tekst niet onder elkaar gaat schuiven */
@@ -519,6 +532,9 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
+    font-family: open sans;
+    font-weight: 400;
+    font-size: 0.8em;
 
     a {
         color: var(--zwart);
@@ -565,7 +581,7 @@ footer {
 
     .comment-text {
         font-weight: 400;
-        font-size: 1.1em 
+        font-size: 1.1em; 
         overflow-wrap: break-word; /* zorgt ervoor dat de woorden netjes onder elkaar komen te staan */
         word-break: break-word;
     }
