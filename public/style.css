@@ -587,6 +587,8 @@ footer {
     .comment-text {
         font-weight: 400;
         font-size: 1.1em 
+        overflow-wrap: break-word; /* zorgt ervoor dat de woorden netjes onder elkaar komen te staan */
+        word-break: break-word;
     }
 
     .comment-date {
