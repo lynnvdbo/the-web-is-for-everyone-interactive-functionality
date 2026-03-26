@@ -31,7 +31,7 @@ main.home {
         gap: 0.5em;
 
         h3 {
-            margin-block: 2em; /*-block = top en bottom in een*/
+            margin-block: 1.5em; /*-block = top en bottom in een*/
         }
     }
 
@@ -42,12 +42,13 @@ main.home {
         margin-left: 1em;
 
         h3 {
-            margin-block: 2em;
+            margin-block: 1.5em;
         }
     }
 }
 
 
+/* bloemenveld collectie */
 .niks-gespaard-veldverkenner {
     background-color: #BFF0FF;
     margin-left: 1em;
@@ -56,31 +57,34 @@ main.home {
     border-radius: var(--border-radius);
     padding: 1.8em;
     text-align: center;
+    font-family: open sans; 
+    font-weight: 400; 
 
     .veldverkenner {
         font-weight:bolder;
     }
 }
 
-
+/* veld nieuws */
 .nieuws-berichten {
-    background-color: #FFD27F;
-    margin-left: 1em;
-    margin-right: 1em;
-    border-radius: var(--border-radius);
+    margin: 0 1em 2em 1em;
     padding: 1em;
+    background-color: #FFD27F; 
+    border-radius: var(--border-radius);
 
-    h4 {
-        font-size: 1.3em;
-        margin-top: 0.6em;
-    }
+    a {
+        color: var(--zwart);
+        text-decoration: none;
+        font-size: 1.1em; 
+        font-family: open sans; /* Baseline Widely availabl */
+        font-weight: 700;
+        display: inline-block;
+        margin-block: 0.8em;
 
-    div {
-        margin-left: 1em;
-
-        img {
-            border-radius: var(--border-radius);
-            margin-block: 1em;
+        &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;        
         }
     }
 
@@ -92,10 +96,24 @@ main.home {
         border-radius: var(--label-radius);
     }
 
+    img {
+        width: 100%;
+        height: 12em;
+        object-fit: cover; 
+    }
+
     .details {
         font-size: 1em;
         display: flex;
-        gap: 7em;
+        gap: 8em;
+    }
+}
+
+.home-slide-nieuws {
+    display: flex;
+    overflow:scroll;
+}
+
     }
 }
 
