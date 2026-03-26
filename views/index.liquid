@@ -23,18 +23,19 @@
 
 
     {% comment %} NIEUWS BERICHTEN {% endcomment %}
-    <article class="nieuws-berichten">
-        <div class="details">
-            <p class="bloemendveld">Bloemendveld</p>
-            <p>4u geleden</p>
-        </div>
 
-        <div>
-            <h4>De na bloei van de duizendblad</h4>
-            <img src="/assets/duizendblad.png" width="280" alt="afbeelding van de duizendblad">
-            <p>De duizendblad is nog maar even in bloei</p>
-        </div>
-    </article>
+    <section class="home-slide-nieuws">
+        {% for news in news %}
+            <article class="nieuws-berichten">
+                <div class="details">
+                    <p class="bloemendveld">Bloemendveld</p>
+                    <p>4u geleden</p>
+                </div>
+                    <a href="/nieuws/{{ news.slug }}">{{ news.title }}</a>
+                    <img src="https://fdnd-agency.directus.app/assets/{{news.image}}" alt="{{news.title}}">
+                </article>
+        {% endfor %} 
+     </section>
 
  </main>
 
