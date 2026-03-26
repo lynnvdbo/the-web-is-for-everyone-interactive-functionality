@@ -41,7 +41,7 @@
     {% for comment in comments %}
       <p>
           <span class="comment-name">
-            {{ comment.name | default: 'onbekend' }}
+            {{ comment.name | default: 'onbekend' | truncate: 20 }} {% comment %} truncate: 20 zorgt ervoor dat de laatste 3 letters van de 20 ... worden {% endcomment %}
           </span>: 
           <span class="comment-text">
             {{ comment.comment }}
