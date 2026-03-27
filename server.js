@@ -69,7 +69,7 @@ app.get('/', async function (request, response) {
 
 // !!! route naar VELDVERKENNER PAGINA !!!  
 app.get('/veldverkenner', async function (request, response) {
-  console.log(tempDummyNews)
+  // console.log(tempDummyNews)
    response.render('veldverkenner.liquid', {nieuws: tempDummyNews.data})
 })
 
@@ -98,7 +98,7 @@ app.get('/nieuws/:slug', async function (request, response) {
 
    const commentResponse = await fetch('https://fdnd-agency.directus.app/items/frankendael_news_comments?' + commentParams)
    const commentResponseJSON = await commentResponse.json()
-    console.log(commentResponseJSON)
+  //  console.log(commentResponseJSON)
     response.render('artikel.liquid', {
       news: result.data,
       newsId: result.data.id,
@@ -135,23 +135,23 @@ app.post('/nieuws/:id/:slug', async (request, response) => {
 
 // !!! route naar COLLECTIE PAGINA !!!  
 app.get('/collectie', async function (request, response) {
-  console.log(tempDummyNews)
-   response.render('collectie.liquid', {nieuws: tempDummyNews.data})
+  // console.log(tempDummyNews)
+   response.render('collectie.liquid', {nieuws: tempDummyNews.data}) 
 })
 
 // !!! route naar COLLECTIE NADEBLOEI PAGINA !!!  
 app.get('/nadebloei', async function (request, response) {
-  console.log(tempDummyNews)
+  // console.log(tempDummyNews)
    response.render('nadebloei.liquid', {nieuws: tempDummyNews.data})
 })
 
 // !!! route naar COLLECTIE INDEBLOEI PAGINA !!!  
 app.get('/indebloei', async function (request, response) {
-  console.log(tempDummyNews)
+  // console.log(tempDummyNews)
    response.render('indebloei.liquid', {nieuws: tempDummyNews.data})
 })
 
-console.log('Let op: Er zijn nog geen routes. Voeg hier dus eerst jouw GET en POST routes toe.')
+// console.log('Let op: Er zijn nog geen routes. Voeg hier dus eerst jouw GET en POST routes toe.')
 
 /*
 // Zie https://expressjs.com/en/5x/api.html#app.get.method over app.get()
