@@ -64,7 +64,12 @@ app.set('views', './views')
 app.get('/', async function (request, response) {
    // Render index.liquid uit de Views map
    // Geef hier eventueel data aan mee
-   response.render('index.liquid')
+    const res = await fetch('https://fdnd-agency.directus.app/items/frankendael_news');
+    const result = await res.json();
+
+    response.render('index.liquid', {
+      news: result.data
+    });
 })
 
 // !!! route naar VELDVERKENNER PAGINA !!!  
@@ -108,9 +113,9 @@ app.get('/nieuws/:slug', async function (request, response) {
   })
 
 // <form action="/nieuws/{{ news.id }}/{{ news.slug }}" method="POST"> vanuit formulier op de nieuwspagina wordt deze post route aangestuurd
-app.post('/nieuws/:id/:slug', async (request, response) => { 
+app.post('/nieuws/:slug', async (request, response) => { 
   
-    console.log(request.params.slug)
+    console.log(request.body)
     const postResponse = await fetch(
       'https://fdnd-agency.directus.app/items/frankendael_news_comments', // API n point van de nieuws comments (hier kan je een GET en POST doen)
       {
@@ -120,17 +125,17 @@ app.post('/nieuws/:id/:slug', async (request, response) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          news: request.params.id,     
+          news: request.body.id,     
           comment: request.body.comment,  // dit is wat er in het formulierelement staat <textarea name="comment" required maxlength="100" style="height: 30px;"></textarea>
           name: request.body.name
         })
       }
     )
 
-    // const data = await postResponse.json()
+    const postJSON = await postResponse.json()
 
-    console.log('het gaat goed vgm')
-    response.redirect(`/nieuws/${request.params.slug}`) // als de post gelukt is eeen redirect naar de get route VAN HET NIEUWA ARTIKEL
+    // response.redirect(`/nieuws/${request.params.slug}`) // als de post gelukt is eeen redirect naar de get route VAN HET NIEUWA ARTIKEL
+    response.redirect(`/nieuws/${request.params.slug}#${postJSON.data.id}`)
 })
 
 // !!! route naar COLLECTIE PAGINA !!!  
