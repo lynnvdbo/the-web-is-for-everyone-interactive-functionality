@@ -17,9 +17,9 @@
     </article>
 
 {% comment %} laat een berichtje achter {% endcomment %}
-    <article>
+    <article id="reactie">
       <h2>Laat hier een leuk bericht achter!</h2>
-        <form action="/nieuws/{{ news.id }}/{{ news.slug }}" method="POST">
+        <form action="/nieuws/{{ news.slug }}" method="POST">
           <label class="name">
           Naam:
           <input type="text" name="name" required>
@@ -28,6 +28,8 @@
             Bericht:
             <textarea name="comment" required maxlength="100" style="height: 30px;"></textarea>
           </label>
+
+          <input type="hidden" name="id" value="{{ news.id }}">
 
           <label>
             <input type="submit" value="Verstuur" class="verstuur-knop">
@@ -39,7 +41,7 @@
   <div class="ontvangen-berichten">
     {{ comments.size }} berichten  {% comment %} dit laat zien hoeveel comments er zijn {% endcomment %}
     {% for comment in comments %}
-      <p>
+      <p id="{{ comment.id }}">
           <span class="comment-name">
             {{ comment.name | default: 'onbekend' | truncate: 20 }} {% comment %} truncate: 20 zorgt ervoor dat de laatste 3 letters van de 20 ... worden {% endcomment %}
           </span>: 
