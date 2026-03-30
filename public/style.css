@@ -245,7 +245,17 @@ main.veldverkenner {
 
         &:hover {
             transform: scale(1.02);
-            opacity: 0.9;
+            
+        }
+    }
+
+    /* wanneer de gebruiker vermindering beweging heeft aan staan krijg je bij de hover geen transform scale maar een opacity */
+    @media (prefers-reduced-motion: reduce) {
+        img {   
+            &:hover {
+                transform: none;
+                opacity: 0.9;
+            }
         }
     }
 
