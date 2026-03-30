@@ -89,6 +89,20 @@ app.get('/nieuws', async function (request, response) {
     });
    })
 
+
+// zorgt voor LAATSTE-OUDSTE
+app.get('/laatste-oudste', async function (request, response) {
+  const params = {
+      'sort': '-date',
+  }
+  const personResponse = await fetch('https://fdnd-agency.directus.app/items/frankendael_news/?' + new URLSearchParams(params))
+
+  const personResponseJSON = await personResponse.json()
+  response.render('nieuws.liquid', {
+      news: result.data
+    });
+})
+
 // !!! dit zorgt ervoor dat het artikel die je aanklikt op de nieuwspagina het goede artikel verschijnt vanuit database !!!  
 app.get('/nieuws/:slug', async function (request, response) {
     // const artikel = tempDummyNews.data.find(item => item.slug === nieuwSlug)
