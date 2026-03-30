@@ -91,7 +91,8 @@ main.home {
 
     .bloemendveld {
         font-size: 0.8em;
-        display: inline-block;
+        display: flex;
+        align-items: center;
         padding: 0.5em;
         border: 1.5px solid rgb(0, 0, 0);
         border-radius: var(--label-radius);
