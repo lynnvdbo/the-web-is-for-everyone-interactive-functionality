@@ -71,6 +71,7 @@ main.home {
     padding: 1em;
     background-color: #FFD27F; 
     border-radius: var(--border-radius);
+    height: 90%;
 
     a {
         color: var(--zwart);
