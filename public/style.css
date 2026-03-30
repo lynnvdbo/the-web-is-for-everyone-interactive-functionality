@@ -622,6 +622,14 @@ http://localhost:8000/nieuws/de-zadenknoppen-van-de-teunisbloem-zijn-nu-goed-te-
     scroll-margin-top: 25rem; /* dit zorgt ervoor dat als je een berichtje hebt verzonden hij niet gelijk boven aan je scherm komt 
     maar er is zit margin dus zie je je berichtje meer in het midden staan */
 
+    @media (prefers-reduced-motion:no-preference) {
+        animation-name: --fade-out-outline;
+        animation-duration: 1s; 
+        animation-delay: 2s; 
+        animation-fill-mode: both;
+        animation-direction: reverse;
+    }
+    
     padding: 0.6em;
 }
 
