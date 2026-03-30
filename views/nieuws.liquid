@@ -34,16 +34,19 @@
 
     {% comment %} DUMMYDATA {% endcomment %}
          {% for news in news %}
-            <article class="nieuws-bericht">
-                <img src="https://fdnd-agency.directus.app/assets/{{news.image}}" alt="{{news.title}}">
-                <p class="label">Bloemendveld</p>
-                <a href="/nieuws/{{ news.slug }}">{{ news.title }}</a>
-            </article>
+            <a href="/nieuws/{{ news.slug }}">
+                <article class="nieuws-bericht">
+                    <img src="https://fdnd-agency.directus.app/assets/{{news.image}}" alt="{{news.title}}">
+                    <p class="label">Bloemendveld</p>
+                    <p class="titel">{{ news.title }}</p>
+                </article>
+            </a>
 
             <hr>
         {% endfor %} 
 
     </div> 
+
  </main>
 
 {% render 'partials/navbar.liquid' %}
