@@ -114,6 +114,12 @@ main.home {
     overflow:scroll;
 }
 
+
+/* MARK: VV PAGINA----- */
+main.veldverkenner {
+    .veldverkenner-svg {
+        height: 100%;
+        width: 100%;
     }
 }
 
