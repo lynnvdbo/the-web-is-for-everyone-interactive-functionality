@@ -24,7 +24,7 @@
 
     {% comment %} NIEUWS BERICHTEN {% endcomment %}
 
-    <section class="home-slide-nieuws">
+    <div class="home-slide-nieuws">
         {% for news in news %}
             <a href="/nieuws/{{ news.slug }}">
             <article class="nieuws-berichten">
@@ -37,7 +37,7 @@
                 </article>
                 </a>
         {% endfor %} 
-     </section>
+     </div>
 
  </main>
 
