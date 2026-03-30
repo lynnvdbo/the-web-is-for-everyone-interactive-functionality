@@ -32,13 +32,12 @@
     {% comment %} NIEUWSBERICHTEN {% endcomment %}
     <div class="alle-nieuws"> 
 
-    {% comment %} DUMMYDATA {% endcomment %}
          {% for news in news %}
             <a href="/nieuws/{{ news.slug }}">
                 <article class="nieuws-bericht">
                     <img src="https://fdnd-agency.directus.app/assets/{{news.image}}" alt="{{news.title}}">
                     <p class="label">Bloemendveld</p>
-                    <p class="titel">{{ news.title }}</p>
+                    <h2 class="titel">{{ news.title }}</h2>
                 </article>
             </a>
 

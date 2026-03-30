@@ -26,14 +26,16 @@
 
     <section class="home-slide-nieuws">
         {% for news in news %}
+            <a href="/nieuws/{{ news.slug }}">
             <article class="nieuws-berichten">
                 <div class="details">
                     <p class="bloemendveld">Bloemendveld</p>
                     <p>4u geleden</p>
                 </div>
-                    <a href="/nieuws/{{ news.slug }}">{{ news.title }}</a>
+                    <h4 class="titel">{{ news.title }}</h4>
                     <img src="https://fdnd-agency.directus.app/assets/{{news.image}}" alt="{{news.title}}">
                 </article>
+                </a>
         {% endfor %} 
      </section>
 
