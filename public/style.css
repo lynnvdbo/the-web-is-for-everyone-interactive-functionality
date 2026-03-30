@@ -607,6 +607,27 @@ footer {
     .comment-date {
         font-weight: 200; 
         font-size: 0.9em;
-        font-style:italic;
+        font-style: italic;
     }
 }
+
+ 
+/* de focus op het verzonden berichtje */
+/* :target pakt automatisch het item met de # en wat erachter staat dus nu -> #reactie
+http://localhost:8000/nieuws/de-zadenknoppen-van-de-teunisbloem-zijn-nu-goed-te-zien#reactie */
+/* en nu bij deze dus -> #78
+http://localhost:8000/nieuws/de-zadenknoppen-van-de-teunisbloem-zijn-nu-goed-te-zien#78 */
+:target {
+    outline: 2px solid; 
+    scroll-margin-top: 25rem; /* dit zorgt ervoor dat als je een berichtje hebt verzonden hij niet gelijk boven aan je scherm komt 
+    maar er is zit margin dus zie je je berichtje meer in het midden staan */
+
+    padding: 0.6em;
+}
+
+@keyframes --fade-out-outline { 
+    0% { 
+        outline-color: transparent; 
+        padding: 0;
+    } 
+} 
