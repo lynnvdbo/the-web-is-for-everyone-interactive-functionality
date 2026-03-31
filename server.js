@@ -139,7 +139,7 @@ app.get('/nieuws/:slug', async function (request, response) {
 
     });
   })
-  
+
 
 // <form action="/nieuws/{{ news.id }}/{{ news.slug }}" method="POST"> vanuit formulier op de nieuwspagina wordt deze post route aangestuurd
 app.post('/nieuws/:slug', async (request, response) => { 
