@@ -178,6 +178,7 @@ main.veldverkenner {
         background-color: var(--sierlint);
         padding: 0.6em;
         border-radius: var(--border-radius);
+        min-width: 4.5em; 
 
         &:hover {
             text-decoration: underline;
