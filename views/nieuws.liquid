@@ -11,16 +11,11 @@
 
     {% comment %} 3 FILTERKNOPPEN {% endcomment %}
     <section class="navigatie-buttons">
-        <a href="/laatste-oudste">Laatste</a>
-        <a href="/oudste-laatste">Oudste</a>
-        <a href="#">Seizoenen </a>
-        {% comment %} <a href="#">In de bloei</a>
-        <a href="#">Na de bloei</a> {% endcomment %}
         <a href="/nieuws" class="sort-button alle {% if activeSort == 'alle' %}is-active{% endif %}">Alle</a></li>
+        <a href="/laatste-oudste" class="sort-button laatste-oudste {% if activeSort == '-date' %}is-active{% endif %}">Laatste</a></li>
+        <a href="/oudste-laatste" class="sort-button sort-button-reverse laatste-oudste {% if activeSort == 'date' %}is-active{% endif %}">Oudste</a></li>
     </section>
 
-
-    {% comment %} ZOEKBALK {% endcomment %}
     <div class="wrapper">
         <div class="zoekbalk">
             <input class="zoekbalkinput" type="text" name="zoekbalkinput" placeholder="Search" value="" />
@@ -30,7 +25,6 @@
             </button>
         </div>
     </div>  
-
 
     {% comment %} NIEUWSBERICHTEN {% endcomment %}
     <div class="alle-nieuws"> 
