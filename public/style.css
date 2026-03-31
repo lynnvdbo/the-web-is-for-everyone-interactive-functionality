@@ -276,9 +276,29 @@ main.veldverkenner {
             &:hover {
                 transform: none;
                 opacity: 0.9;
+
+        .sort-button {
+            text-decoration: none;
+
+            &.is-active {
+                outline: solid 2px var(--zwart);
+                }
+            }
+
+        .sort-button-reverse {
+            color: #000000;
+
+            &:hover {
+                color: #000000;
+            }
+
+            &.is-active {
+                outline: solid 2px var(--zwart);  
             }
         }
     }
+
+    
 
     .label {
         font-size: 0.6em;
