@@ -85,7 +85,8 @@ app.get('/nieuws', async function (request, response) {
     const result = await res.json();
 
     response.render('nieuws.liquid', {
-      news: result.data
+      news: result.data,
+      activeSort: 'alle',
     });
    })
 
@@ -99,7 +100,8 @@ app.get('/laatste-oudste', async function (request, response) {
 
   const personResponseJSON = await personResponse.json()
   response.render('nieuws.liquid', {
-      news: result.data
+      news: personResponseJSON.data,
+      activeSort: '-date',
     });
 })
 
@@ -112,9 +114,11 @@ app.get('/oudste-laatste', async function (request, response) {
 
   const personResponseJSON = await personResponse.json()
   response.render('nieuws.liquid', {
-      news: result.data
+      news: personResponseJSON.data,
+       activeSort: 'date',
     });
 })
+
 
 
 // !!! dit zorgt ervoor dat het artikel die je aanklikt op de nieuwspagina het goede artikel verschijnt vanuit database !!!  
