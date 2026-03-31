@@ -249,6 +249,7 @@ main.veldverkenner {
 
     h2 {
         font-size: 1em;
+        margin-left: 0em;
     }
 
     .nieuws-bericht {
@@ -265,18 +266,15 @@ main.veldverkenner {
         width: 90%;
 
         &:hover {
-            transform: scale(1.02);
+            /* transform: none; */
+            opacity: 0.9;
             
         }
-    }
 
-    /* wanneer de gebruiker vermindering beweging heeft aan staan krijg je bij de hover geen transform scale maar een opacity */
-    @media (prefers-reduced-motion: reduce) {
-        img {   
+        /* wanneer de gebruiker vermindering beweging heeft aan staan krijg je bij de hover geen transform scale maar een opacity */
             &:hover {
-                transform: none;
-                opacity: 0.9;
-
+                transform: scale(1.02);
+                opacity:1;
             }
         }
     }
