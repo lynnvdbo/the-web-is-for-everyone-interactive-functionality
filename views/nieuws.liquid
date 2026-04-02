@@ -15,7 +15,7 @@
         <a href="/laatste-oudste" class="sort-button laatste-oudste {% if activeSort == '-date' %}is-active{% endif %}">Laatste</a>
         <a href="/oudste-laatste" class="sort-button sort-button-reverse laatste-oudste {% if activeSort == 'date' %}is-active{% endif %}">Oudste</a>
     </section>
-
+  
     <div class="wrapper">
         <div class="zoekbalk">
             <input class="zoekbalkinput" type="text" name="zoekbalkinput" placeholder="Search" value="" />
@@ -45,6 +45,6 @@
 
  </main>
 
-{% render 'partials/navbar.liquid' %}
+{% render 'partials/navbar.liquid', activeIcon: activeIcon %}
 
 {% render 'partials/foot.liquid' %}
