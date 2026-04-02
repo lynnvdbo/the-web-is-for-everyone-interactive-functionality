@@ -370,6 +370,21 @@ main.artikel {
             margin-block: 1.3em;
             gap: 0.5em;
         }
+
+        button {
+            padding: .5rem;
+            background-color: transparent;
+            width: fit-content;
+            cursor: pointer;
+            border: 1px solid rgb(0, 0, 0);
+
+            &:hover {
+                background-color: #686868;
+                color: white;
+
+            }
+        }               
+        }
     }
 
     h2 {
@@ -401,7 +416,7 @@ main.artikel {
             font-weight: 700;
         }
     }
-}
+
 
 
 /* MARK: COLLECTIE PAGINA ----- */
