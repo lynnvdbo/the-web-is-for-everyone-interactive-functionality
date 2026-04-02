@@ -145,7 +145,8 @@ app.get('/nieuws/:slug', async function (request, response) {
     response.render('artikel.liquid', {
       news: result.data,
       newsId: result.data.id,
-      comments: commentResponseJSON.data
+      comments: commentResponseJSON.data,
+      activeIcon: 'nieuws',
     });
   })
 
@@ -165,7 +166,8 @@ app.post('/nieuws/:slug', async (request, response) => {
         body: JSON.stringify({
           news: request.body.id,     
           comment: request.body.comment,  // dit is wat er in het formulierelement staat <textarea name="comment" required maxlength="100" style="height: 30px;"></textarea>
-          name: request.body.name
+          name: request.body.name,
+          activeIcon: 'nieuws',
         })
       }
     )
