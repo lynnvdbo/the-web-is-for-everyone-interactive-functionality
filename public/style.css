@@ -713,6 +713,7 @@ http://localhost:8000/nieuws/de-zadenknoppen-van-de-teunisbloem-zijn-nu-goed-te-
 /* en nu bij deze dus -> #78
 http://localhost:8000/nieuws/de-zadenknoppen-van-de-teunisbloem-zijn-nu-goed-te-zien#78 */
 /* hierdoor krijg ik alleen de animatie op de ontvangen berichten p */
+.ontvangen-berichten p:target {
     outline: 2px solid; 
     scroll-margin-top: 25rem; /* dit zorgt ervoor dat als je een berichtje hebt verzonden hij niet gelijk boven aan je scherm komt 
     maar er is zit margin dus zie je je berichtje meer in het midden staan */
