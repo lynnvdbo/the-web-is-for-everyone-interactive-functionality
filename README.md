@@ -56,6 +56,13 @@ https://github.com/user-attachments/assets/59ccb1a8-8f6e-4549-b7dd-dbb2893492e6
 
 In heb ook active states toegevoegd op de filters bij het nieuws en in de navigatie zodat de gebruiker weet waar hij/zij zicht bevindt. Ik heb bij de filters gekozen voor een zwarte border om het duidelijk te laten zien aan de gebruiker. Voor de navigatie heb ik ervoor gekozen om het subtiel te houden, dus zit er een streepje onder het desbetreffende pagina. Ook heb ik op de homepage alle nieuwsartikelen geplaatst met een scroll.
 
+HTML
+https://github.com/lynnvdbo/the-web-is-for-everyone-interactive-functionality/blob/d467b780fcfe87ef766edd0888f2cf9139949493/views/nieuws.liquid#L14-L16
+CSS
+https://github.com/lynnvdbo/the-web-is-for-everyone-interactive-functionality/blob/d467b780fcfe87ef766edd0888f2cf9139949493/public/style.css#L304-L322
+server.JS
+https://github.com/lynnvdbo/the-web-is-for-everyone-interactive-functionality/blob/d467b780fcfe87ef766edd0888f2cf9139949493/server.js#L91-L95
+
 <img width="160" height="650" alt="mobile-black kopie" src="https://github.com/user-attachments/assets/151d772d-0809-4116-8cf2-8ceca46cd002" />
 
 <img width="160" height="650" alt="mobile-black(1)" src="https://github.com/user-attachments/assets/068ec21e-9635-4021-8c82-3709ac6073eb" />
@@ -65,7 +72,6 @@ In heb ook active states toegevoegd op de filters bij het nieuws en in de naviga
 <img width="392" height="89" alt="Scherm­afbeelding 2026-04-02 om 22 27 31" src="https://github.com/user-attachments/assets/7cb5c74e-e259-4fa3-b048-66203f8932f8" />
 
 https://github.com/user-attachments/assets/0dfec0d1-dfa7-47a6-9f94-fd9bf0631ea6
-
 
 ## Huisstijl
 Van de opdrachtgever hebben wij een prototype gekregen van het design in een [figma bestand](https://www.figma.com/design/9UctVXSWnspKX72xtLvNQ5/Prototype-Bloemenveld?node-id=0-1&p=f&t=qHEk4ifRm1wbrbWr-0) Op basis van dat prototype design ben ik mijn website gaan maken. Ik heb dezelfde kleuren, afbeeldingen, fonts etc gebruikt en toegepast op de website.
@@ -82,6 +88,8 @@ Doordat de website een webapp is, is het niet noodzakelijk om een ipad of deskto
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 De website is gebouwd met HTML, CSS en JS, NodeJS, Express, JSON en Liquid
 
+###  @media (prefers-reduced-motion:no-preference)
+
 In mijn CSS code maak ik gebruik @media (prefers-reduced-motion:no-preference).
 Dit zrogt ervoor dat de mensen die minder beweging hebben ingesteld geen amimaties te zijn krijgt.
 https://github.com/lynnvdbo/the-web-is-for-everyone-interactive-functionality/blob/a59dec1848139960f125f7d8a4a389aff6e6ca10/public/style.css#L726-L732
@@ -89,6 +97,16 @@ https://github.com/lynnvdbo/the-web-is-for-everyone-interactive-functionality/bl
 In het filmpje hierboven bij een comment plaatsen zie je de animatie dat er een zwarte border om je bericht komt als je hem hebt geplaatst en dat hij na een paar secondes weg gaat. Als iemand geen animatie wil dan krijgt verdwijnt de border niet en blijf hij staan.
 
 https://github.com/user-attachments/assets/a8c9ab25-02d9-4db6-b64b-6495bfa32dd3
+
+### Liquid filters
+
+Ik heb ook gebruik gemaakt van liquid filters
+
+truncate: 20 -> zorgt ervoor dat de laatste 3 letters van de 20 ... worden 
+https://github.com/lynnvdbo/the-web-is-for-everyone-interactive-functionality/blob/d467b780fcfe87ef766edd0888f2cf9139949493/views/artikel.liquid#L46
+
+date: '%d-%m-%Y %H:%M -> zorgt dat de meest recente berichtje boveaan staat
+https://github.com/lynnvdbo/the-web-is-for-everyone-interactive-functionality/blob/d467b780fcfe87ef766edd0888f2cf9139949493/views/artikel.liquid#L53
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
@@ -99,6 +117,8 @@ https://github.com/user-attachments/assets/a8c9ab25-02d9-4db6-b64b-6495bfa32dd3
 
 ## Bronnen
 [Figm bestand prototpye](https://www.figma.com/design/9UctVXSWnspKX72xtLvNQ5/Prototype-Bloemenveld?node-id=0-1&p=f&t=qHEk4ifRm1wbrbWr-0)
+
+https://liquidjs.com/filters/overview.html
 
 ## Licentie
 
