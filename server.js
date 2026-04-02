@@ -179,6 +179,7 @@ app.post('/nieuws/:slug', async (request, response) => {
 })
 
 
+// DELETE knop
 app.post('/nieuws/:id/:slug/verwijder', async (request, response) => {
   const commentId =  request.body.comment_id
   const slug = request.params.slug
