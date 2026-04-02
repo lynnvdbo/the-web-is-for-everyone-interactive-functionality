@@ -38,7 +38,7 @@
     </article>
 
   {% comment %} alle ontvangen berichtjes {% endcomment %}
-  <div class="ontvangen-berichten">
+  <div class="ontvangen-berichten" id="comment-lijst">
     {{ comments.size }} berichten  {% comment %} dit laat zien hoeveel comments er zijn {% endcomment %}
     {% for comment in comments %}
       <p id="{{ comment.id }}">

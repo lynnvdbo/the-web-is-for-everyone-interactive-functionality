@@ -185,7 +185,7 @@ app.post('/nieuws/:id/:slug/verwijder', async (request, response) => {
       method: 'DELETE'
     });
  
-  response.redirect(`/nieuws/${slug}#test`) // als de post gelukt is een redirect naar de get route VAN HET NIEUWS ARTIKEL
+  response.redirect(`/nieuws/${slug}#comment-lijst`) // als de post gelukt is een redirect naar de get route VAN HET NIEUWS ARTIKEL
 })
 
 
