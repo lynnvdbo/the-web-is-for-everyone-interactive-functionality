@@ -45,6 +45,11 @@ main.home {
             margin-block: 1.5em;
         }
     }
+
+     h2 {
+        margin-left: 0.7em;
+        font-size: 1.5em;
+    }
 }
 
 
@@ -388,8 +393,8 @@ main.artikel {
     }
 
     h2 {
-        margin-left: 0.5em;
-        font-size: 1.5em;
+        margin-left: 0em;
+        font-size: 1.2em;
     }
 
     .verstuur-knop {
