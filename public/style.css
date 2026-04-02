@@ -649,6 +649,21 @@ footer {
         justify-items: center;
         width: 100%;
     }
+
+    .navigatie-icons {
+    text-decoration: none;
+
+    &:hover {
+            color: #000000;
+        }
+
+    &.is-active {
+        color:#000000;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 5px;
+    }
+    }
 }
 
 
