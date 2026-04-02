@@ -68,14 +68,18 @@ app.get('/', async function (request, response) {
     const result = await res.json();
 
     response.render('index.liquid', {
-      news: result.data
+      news: result.data,
+      activeIcon: 'home',
     });
 })
 
 // !!! route naar VELDVERKENNER PAGINA !!!  
 app.get('/veldverkenner', async function (request, response) {
   // console.log(tempDummyNews)
-   response.render('veldverkenner.liquid', {nieuws: tempDummyNews.data})
+   response.render('veldverkenner.liquid', {
+    nieuws: tempDummyNews.data,
+    activeIcon: 'veldverkenner',
+  })
 })
 
 // !!! route naar NIEUWS PAGINA !!! 
@@ -87,6 +91,7 @@ app.get('/nieuws', async function (request, response) {
     response.render('nieuws.liquid', {
       news: result.data,
       activeSort: 'alle',
+      activeIcon: 'nieuws',
     });
    })
 
@@ -102,6 +107,7 @@ app.get('/laatste-oudste', async function (request, response) {
   response.render('nieuws.liquid', {
       news: personResponseJSON.data,
       activeSort: '-date',
+      activeIcon: 'nieuws',
     });
 })
 
@@ -116,9 +122,9 @@ app.get('/oudste-laatste', async function (request, response) {
   response.render('nieuws.liquid', {
       news: personResponseJSON.data,
        activeSort: 'date',
+       activeIcon: 'nieuws',
     });
 })
-
 
 
 // !!! dit zorgt ervoor dat het artikel die je aanklikt op de nieuwspagina het goede artikel verschijnt vanuit database !!!  
@@ -174,19 +180,26 @@ app.post('/nieuws/:slug', async (request, response) => {
 // !!! route naar COLLECTIE PAGINA !!!  
 app.get('/collectie', async function (request, response) {
   // console.log(tempDummyNews)
-   response.render('collectie.liquid', {nieuws: tempDummyNews.data}) 
+   response.render('collectie.liquid', {
+    nieuws: tempDummyNews.data,
+    activeIcon: 'collectie',
+  }) 
 })
 
 // !!! route naar COLLECTIE NADEBLOEI PAGINA !!!  
 app.get('/nadebloei', async function (request, response) {
   // console.log(tempDummyNews)
-   response.render('nadebloei.liquid', {nieuws: tempDummyNews.data})
+   response.render('nadebloei.liquid', {
+    nieuws: tempDummyNews.data
+  })
 })
 
 // !!! route naar COLLECTIE INDEBLOEI PAGINA !!!  
 app.get('/indebloei', async function (request, response) {
   // console.log(tempDummyNews)
-   response.render('indebloei.liquid', {nieuws: tempDummyNews.data})
+   response.render('indebloei.liquid', {
+    nieuws: tempDummyNews.data
+  })
 })
 
 // console.log('Let op: Er zijn nog geen routes. Voeg hier dus eerst jouw GET en POST routes toe.')
