@@ -146,7 +146,6 @@ app.get('/nieuws/:slug', async function (request, response) {
       news: result.data,
       newsId: result.data.id,
       comments: commentResponseJSON.data
-
     });
   })
 
@@ -176,6 +175,19 @@ app.post('/nieuws/:slug', async (request, response) => {
     // response.redirect(`/nieuws/${request.params.slug}`) // als de post gelukt is eeen redirect naar de get route VAN HET NIEUWA ARTIKEL
     response.redirect(`/nieuws/${request.params.slug}#${postJSON.data.id}`)
 })
+
+
+app.post('/nieuws/:id/:slug/verwijder', async (request, response) => {
+  const commentId =  request.body.comment_id
+  const slug = request.params.slug
+ 
+  await fetch(`https://fdnd-agency.directus.app/items/frankendael_news_comments/${commentId}`, {
+      method: 'DELETE'
+    });
+ 
+  response.redirect(`/nieuws/${slug}#test`) // als de post gelukt is een redirect naar de get route VAN HET NIEUWS ARTIKEL
+})
+
 
 // !!! route naar COLLECTIE PAGINA !!!  
 app.get('/collectie', async function (request, response) {
