@@ -12,13 +12,13 @@
     <article>
         <img src="https://fdnd-agency.directus.app/assets/{{ news.image }}" alt="{{ news.title }}" width="342" height="300"> 
         <p>Geplaatst op: {{ news.date }}</p> 
-        <h1>{{ news.title }}</h1>
+        <h2>{{ news.title }}</h2>
         <p>{{ news.body }}</p>  
     </article>
 
 {% comment %} laat een berichtje achter {% endcomment %}
     <article id="reactie">
-      <h2>Laat hier een leuk bericht achter!</h2>
+      <h3>Laat hier een leuk bericht achter!</h3>
         <form action="/nieuws/{{ news.slug }}" method="POST">
           <label class="name">
           Naam:

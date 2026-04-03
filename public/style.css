@@ -11,11 +11,6 @@ h1 {
     text-align: center;
 }
 
-
-h2 {
-    margin-left: 0.6em;
-}
-
 main {
     margin-bottom: 5em;
 }
@@ -23,6 +18,11 @@ main {
 
 /* MARK: HOME PAGINA ----- */
 main.home {
+
+    h2 {
+        margin-left: 0.7em;
+        font-size: 1.5em;
+    }
 
     /* Section met collectie */
     section:nth-of-type(1) {
@@ -44,11 +44,6 @@ main.home {
         h3 {
             margin-block: 1.5em;
         }
-    }
-
-     h2 {
-        margin-left: 0.7em;
-        font-size: 1.5em;
     }
 }
 
@@ -338,15 +333,17 @@ main.artikel {
         /* font-family: inter; */
         font-family: open sans, sans-serif;
         font-weight: 400;
+        margin-top: 0.3em;
     }
 
     article:nth-of-type(1) {
         margin-left: 1em;
         margin-right: 1em;
         
-    h1 {
+    h2 {
         font-size: 1.5em;
-        text-align: left;
+        margin-block: 1em;
+        margin: 1em 0em 0.5em 0em;
     }
 
     img {
@@ -406,7 +403,7 @@ main.artikel {
         }
     }
 
-    h2 {
+    h3 {
         margin-left: 0em;
         font-size: 1.2em;
     }
@@ -494,6 +491,7 @@ main.collectie {
         margin-bottom: 7em;
 
         a:hover {
+            background-color: var(--heuvel);
             border: 1.5px solid var(--donker-accent);
             color: var(--donker-accent);
         }
