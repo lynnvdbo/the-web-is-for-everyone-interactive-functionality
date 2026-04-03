@@ -453,6 +453,8 @@ main.collectie {
             border: 1.5px solid var(--donker-accent);
             width: max-content; /* dit zorgt dat de tekst niet onder elkaar gaat schuiven */
             cursor: pointer;
+            width: 91%;
+            text-align: center;
         }
     }
 
@@ -483,6 +485,7 @@ main.collectie {
     .afbeelding {
             object-fit: cover;
             padding: 1em 1.4em 1em 1em;
+            width: 100%;
         }
     }
 
