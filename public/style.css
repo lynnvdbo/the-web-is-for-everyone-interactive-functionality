@@ -451,10 +451,14 @@ main.collectie {
             padding: 1em 5.2em 1em 5.2em;
             border-radius: var(--border-radius);
             border: 1.5px solid var(--donker-accent);
-            width: max-content; /* dit zorgt dat de tekst niet onder elkaar gaat schuiven */
             cursor: pointer;
             width: 91%;
             text-align: center;
+        }
+
+        @media (width > 800px) {
+            max-width: 25em; 
+            margin-inline: auto;     
         }
     }
 
@@ -516,6 +520,12 @@ main.collectie {
     section {
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        @media (width > 800px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-inline: 1em;
+        }
+
     }
 
     /* teunisbloem */
@@ -585,6 +595,12 @@ main.collectie-nadebloei {
     section {
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        @media (width > 800px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-inline: 1em;
+        }
+
     }
 
     /* teunisbloem */
