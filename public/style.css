@@ -530,7 +530,7 @@ main.collectie {
         text-align: center;
     }   
 
-    section {
+    div {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
@@ -609,7 +609,7 @@ main.collectie-nadebloei {
         text-align: center;
     }   
 
-    section {
+    div {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
