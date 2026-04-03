@@ -427,14 +427,18 @@ main.artikel {
 /* MARK: COLLECTIE PAGINA ----- */
 main.collectie {
     article {
-        margin-left: 1em;
-        margin-right: 1em;
+        margin-left: 1.5em;
+        margin-right: 1.8em;
         border-radius: var(--border-radius);
         font-family: open sans, sans-serif;
         font-weight: 400;
 
         p {
             margin: 1em;
+        }
+
+        h2 {
+            margin-left: 0.8em;
         }
 
         a {
@@ -478,8 +482,7 @@ main.collectie {
 
     .afbeelding {
             object-fit: cover;
-            padding: 1em;
-            border-radius: 20px;
+            padding: 1em 1.4em 1em 1em;
         }
     }
 
