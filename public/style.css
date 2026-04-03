@@ -334,7 +334,6 @@ main.veldverkenner {
 
 /* MARK: ARTIKEL PAGINA ----- */
 main.artikel {
-
     p {
         /* font-family: inter; */
         font-family: open sans, sans-serif;
@@ -398,7 +397,12 @@ main.artikel {
                 color: white;
 
             }
-        }               
+        } 
+        }
+
+        @media (width > 1100px) {
+            max-width: 50em; 
+            margin-inline: auto;     
         }
     }
 
