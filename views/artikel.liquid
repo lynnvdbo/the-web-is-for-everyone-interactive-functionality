@@ -56,7 +56,7 @@
           {% comment %} verwijder knop {% endcomment %}
           <form method="POST" action="/nieuws/{{ news.id }}/{{ news.slug }}/verwijder">
             <input type="hidden" name="comment_id" value="{{ comment.id }}">
-            <button type="sumbit">Verwijder</button>
+            <button type="submit">Verwijder</button>
         </form>
       </p>
     {% else %}
