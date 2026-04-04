@@ -114,6 +114,7 @@ https://github.com/lynnvdbo/the-web-is-for-everyone-interactive-functionality/bl
 2. Open hem in VSCodium of een code editor
 3. Open dan de terminal en type npm install
 4. Start vervolgens de website door npm start in te typen
+5. Open vervolgens http://localhost:8000 om de website te zien in de browser
 
 ## Bronnen
 [Figm bestand prototpye](https://www.figma.com/design/9UctVXSWnspKX72xtLvNQ5/Prototype-Bloemenveld?node-id=0-1&p=f&t=qHEk4ifRm1wbrbWr-0)
